@@ -8,7 +8,7 @@ use GDO\DB\GDT_Checkbox;
 
 /**
  * Recaptcha Captcha implementation for gdo6.
- * Uses recaptcha2 with hidden technique(2).
+ * Uses recaptcha2.
  * @see https://developers.google.com/recaptcha/docs/display#explicit_render
  * @author gizmore
  * @version 6.10.1
@@ -30,8 +30,8 @@ final class Module_Captcha extends GDO_Module
     {
         return [
             GDT_Checkbox::make('google_gets_ip')->initial('0'),
-            GDT_Secret::make('google_site_key')->initial('6Lfc1ooaAAAAAMUX3lLx6A1GiX1hs43VN2ebO43S'),
-            GDT_Secret::make('google_site_secret')->initial('6Lfc1ooaAAAAAKVBEFcrl7wrXd4tDCEBLyjXPJJa'),
+            GDT_Secret::make('google_site_key')->initial('6xLfc1ooaAAAAAMUX3lLx6A1GiX1hs43VN2ebO43S'),
+            GDT_Secret::make('google_site_secret')->initial('6xLfc1ooaAAAAAKVBEFcrl7wrXd4tDCEBLyjXPJJa'),
         ];
     }
     public function cfgGoogleGetsIP() { return $this->getConfigValue('google_gets_ip'); }
