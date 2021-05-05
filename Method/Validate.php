@@ -9,6 +9,8 @@ use GDO\Net\GDT_IP;
 
 final class Validate extends Method
 {
+    public function showInSitemap() { return false; }
+    
     public function gdoParameters()
     {
         return [

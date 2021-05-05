@@ -22,11 +22,12 @@ class GDT_Captcha extends GDT_String
 	
 	public $notNull = true;
 	
+	public function defaultName() { return 'captcha'; }
+	
 	public function addFormValue(GDT_Form $form, $value) {}
 	
 	protected function __construct()
 	{
-		$this->name = 'captcha';
 		$this->icon('captcha');
 		$this->tooltip('tt_captcha');
 		$this->initial = GDO_Session::get('php_captcha_lock');
