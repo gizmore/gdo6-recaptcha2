@@ -13,7 +13,7 @@ use GDO\Session\GDO_Session;
  * Google recaptcha implementation.
  * 
  * @author gizmore
- * @version 6.10.1
+ * @version 6.10.4
  * @since 3.4.0
  */
 class GDT_Captcha extends GDT_String
@@ -21,6 +21,8 @@ class GDT_Captcha extends GDT_String
 	use WithIcon;
 	
 	public $notNull = true;
+	
+	public $cli = false;
 	
 	public function defaultName() { return 'captcha'; }
 	
