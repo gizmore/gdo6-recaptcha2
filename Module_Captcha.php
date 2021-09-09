@@ -54,7 +54,7 @@ final class Module_Captcha extends GDO_Module
     {
         $key = $this->cfgSiteKey();
         $script_html = 'window.gdo6_recaptcha_key = \'' . $key ."';\n";
-        Javascript::addJavascriptInline($script_html);
+        Javascript::addJavascriptPreInline($script_html);
     }
     
 }
