@@ -46,15 +46,15 @@ final class Module_Captcha extends GDO_Module
     public function onIncludeScripts()
     {
         $this->addInlineKey();
-        $this->addJavascript('js/gdo6-recaptcha2.js');
-        Javascript::addJavascript('//www.google.com/recaptcha/api.js?onload=googleCallbackRecaptcha&render=explicit');
+        $this->addJS('js/gdo6-recaptcha2.js');
+        Javascript::addJS('//www.google.com/recaptcha/api.js?onload=googleCallbackRecaptcha&render=explicit');
     }
     
     private function addInlineKey()
     {
         $key = $this->cfgSiteKey();
         $script_html = 'window.gdo6_recaptcha_key = \'' . $key ."';\n";
-        Javascript::addJavascriptPreInline($script_html);
+        Javascript::addJSPreInline($script_html);
     }
     
 }
